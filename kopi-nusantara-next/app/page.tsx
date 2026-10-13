@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [coffeeIdx, setCoffeeIdx] = useState(0);
+  const coffeeImgs = ["/2.png", "/3.png", "/4.png", "/5.png"];
 
   useEffect(() => {
     const textHeader = document.querySelector(".text-header") as HTMLElement | null;
@@ -26,6 +28,13 @@ export default function Home() {
       clearTimeout(start);
       if (task) clearInterval(task);
     };
+  }, []);
+
+  useEffect(() => {
+  const t = setInterval(() => {
+    setCoffeeIdx((i) => (i + 1) % 4);
+  }, 1000);
+  return () => clearInterval(t);
   }, []);
 
   return (
@@ -59,28 +68,28 @@ export default function Home() {
       <p className="desc-judul">We&apos;re using a high quality beans that makes our coffee smooth.</p>
       <div className="info-beans">
         <article>
-          <Image className="beans" src="/11.png" alt="gambar-bean" width={50} height={50} />
+          <Image className="beans" src="/11.png" alt="gambar-bean" width={500} height={500} />
           <div className="text-beans">
             <h2>Type of Coffee</h2>
             <p>Biji kopi yang digunakan adalah tipe biji kopi Arabica dan Robusta lokal yang ditanam di Indonesia, Arabica cenderung memiliki rasa asam buah (lemon, jeruk, gula tebu) serta manis yang smooth, sedangkan kopi Robusta cenderung punya rasa yang lebih kuat dan pahit dari Arabica, rasanya cenderung coklat pahit (kakao) dan aroma seperti tembakau.</p>
           </div>
         </article>
         <article>
-          <Image className="beans" src="/12.png" alt="gambar kopi dengan aroma" width={50} height={50} />
+          <Image className="beans" src="/12.png" alt="gambar kopi dengan aroma" width={500} height={500} />
           <div className="text-beans">
             <h2>Coffee Processing</h2>
             <p>Kopi dengan aroma yang wangi & rasa yang enak tentu melalui proses yang tidak instan, mulai dari pengeringan setelah panen (pasca panen) yang beragam seperti proses natural, washed, honey, fermentation, dsb., setiap proses panen ini akan menghasilkan biji kopi berkuaitas dengan rasa dan aroma yang unik ketika diseduh.</p>
           </div>
         </article>
         <article>
-          <Image className="beans" src="/13.png" alt="image good beans" width={50} height={50} />
+          <Image className="beans" src="/13.png" alt="image good beans" width={500} height={500} />
           <div className="text-beans">
             <h2>We only using Good Beans</h2>
             <p>Produk Kopi Nusantara hanya gunakan biji kopi berkualitas, sourcing langsung dari lahan panen petani. Sehingga, biji kopi ketika disangrai & diseduh akan ngeluarin aroma wangi, harum, dan warna biji kopi berubah jadi coklat muda yang rata.</p>
           </div>
         </article>
         <article>
-          <Image className="beans" src="/14.png" alt="image fresh roasted" width={50} height={50} />
+          <Image className="beans" src="/14.png" alt="image fresh roasted" width={500} height={500} />
           <div className="text-beans">
             <h2>Fresh Roasted Guarantee</h2>
             <p>Biji kopi segar kami sangrai (roasting) dengan tingkat kematangan yang pas, misal Arabica akan kami sangrai di tingkat kematangan sedang (medium), jadi ketika diseduh akan mengeluarkan aroma wangi buah, rempah-rempah, dan ketika diminum tidak terlalu asam dan applicable untuk seduhan manual, kopi susu maupun dibuat espresso.</p>
@@ -93,28 +102,28 @@ export default function Home() {
       <p className="desc-judul">Sold up to 1000+</p>
       <div className="menuBest">
         <article>
-          <Image className="menu" src="/2.png" alt="americano" width={50} height={50} />
+          <Image className="menu" src="/2.png" alt="americano" width={500} height={500} />
           <div className="info-best">
             <h2>Americano</h2>
             <p>Espresso dengan tambahan air panas, menghasilkan rasa kopi yang ringan, clean, dan tetap memiliki karakter khas espresso.</p>
           </div>
         </article>
         <article>
-          <Image className="menu" src="/3.png" alt="flat white" width={50} height={50} />
+          <Image className="menu" src="/3.png" alt="flat white" width={500} height={500} />
           <div className="info-best">
             <h2>Flat White</h2>
             <p>Espresso yang dipadukan dengan steamed milk bertekstur lembut, menghasilkan rasa kopi yang creamy dengan cita rasa espresso yang tetap terasa kuat.</p>
           </div>
         </article>
         <article>
-          <Image className="menu" src="/4.png" alt="caramel macchiato" width={50} height={50} />
+          <Image className="menu" src="/4.png" alt="caramel macchiato" width={500} height={500} />
           <div className="info-best">
             <h2>Caramel Macchiato</h2>
             <p>Perpaduan espresso, susu lembut, dan manisnya saus karamel yang memberikan rasa creamy dan sedikit manis.</p>
           </div>
         </article>
         <article>
-          <Image className="menu" src="/5.png" alt="sea salt latte" width={50} height={50} />
+          <Image className="menu" src="/5.png" alt="sea salt latte" width={500} height={500} />
           <div className="info-best">
             <h2>Sea Salt Latte</h2>
             <p>Latte creamy dengan sentuhan foam sea salt yang gurih dan lembut, menciptakan perpaduan rasa manis, creamy, dan sedikit asin yang unik.</p>
@@ -126,7 +135,7 @@ export default function Home() {
       <h1>Order Now</h1>
       <p className="desc-judul">Order our coffee to get that authentic taste</p>
       <div className="konten-order">
-        <div className="gif"><Image src="/2.png" alt="kopi" width={50} height={50} /></div>
+        <div className="gif"><Image src={coffeeImgs[coffeeIdx]} alt="kopi" width={500} height={500} /></div>
         <div className="text-order">
           <h2>Interested With Our Coffee?</h2>
           <p className="desc-order">Discover the rich aroma and delightful flavors in every cup we serve. From bold espresso to creamy and sweet favorites, there’s always a coffee waiting to match your taste. Come by, take a sip, and find your new favorite coffee with us!</p>

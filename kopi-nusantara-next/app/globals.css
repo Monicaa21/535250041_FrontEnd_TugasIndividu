@@ -334,23 +334,6 @@ article p {
 .gif img {
     height: 25vw;
     width: auto;
-    animation: kopi 4s infinite;
-}
-
-/* Animasi gif */
-@keyframes kopi {
-    0%, 25% {
-        content: url("/images/2.png");
-    }
-    26%, 50% {
-        content: url("/images/3.png");
-    }
-    51%, 75% {
-        content: url("/images/4.png");
-    }
-    76%, 100% {
-        content: url("/images/5.png");
-    }
 }
 
 /*========================*/
