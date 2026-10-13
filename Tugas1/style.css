@@ -1,0 +1,78 @@
+#home {
+    padding-left: 30px; /*gap dikiri*/
+    color: #e7e7ff;
+}
+
+#profile {
+    color: #e7e7ff;
+}
+
+#contact {
+    /*gap di kanan*/
+    padding-right: 30px;
+    color: #e7e7ff;
+}
+
+body {
+    margin: 0;
+    font-family: "Merriweather", sans-serif;
+    /*background body*/
+    background: #e7e7ff;
+    color: #9699e1;
+}
+
+header {
+    /*padding= kayak semua sisi margin/outline dari isinya mau seberapa tebal*/
+    padding: 15px;
+    text-align: center;
+    font-family: "DM Serif Display", sans-serif;
+    background: #fdf1e2;
+    font-size: 30px;
+    font-weight: 400;
+    color: #9699e1;
+}
+
+/*header h1 {
+    -webkit-text-stroke: 7px #4a4d8f;
+    paint-order biar text outline nya keluar, gak masuk ke dalem text
+    paint-order: stroke fill;
+}*/
+
+header p {
+    font-family: "Merriweather", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+nav {
+    padding: 15px;
+    text-align: center;
+    background: #9699e1;
+    display: flex;
+    justify-content: space-between; /*gap antar kata*/
+}
+
+article {
+    /*padding text nya dari box putih, ibarat margin tiap sisi*/
+    padding: 20px;
+    margin: 50px;
+    background: #ffffff;
+    /*border radius buat tajemnya sisi*/
+    border-radius: 10px;
+    box-shadow: #4a4d8f;
+    color: #4a4d8f;
+}
+
+article h2 {
+    font-size: 30px;
+    font-family: "Merriweather", sans-serif;
+    /*tebel enggaknya font*/
+    font-weight: 800;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #fdf1e2;
+    color: #4a4d8f;
+}
