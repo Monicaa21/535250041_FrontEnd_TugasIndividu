@@ -61,6 +61,10 @@ export default function Home() {
         <h1>Kopi Nusantara</h1>
         <p>Artisan coffee, rooted in the heart of the Nusantara.</p>
         <p>It&apos;s more than just a coffee.</p>
+        <div className="info-nama-nim">
+          <p>Nama: Monica Irene</p>
+          <p>NIM: 535250041</p>
+        </div>
       </div>
     </section>
     <section className="getToKnow" id="bean">

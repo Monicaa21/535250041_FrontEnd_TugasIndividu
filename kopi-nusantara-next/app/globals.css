@@ -129,6 +129,10 @@ section {
     margin: 0;
 }
 
+.info-nama-nim {
+    margin-top: 20px;
+}
+
 h1 {
     font-size: 400%;
     font-family: "Playfair Display", sans-serif;
