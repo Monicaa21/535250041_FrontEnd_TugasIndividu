@@ -1,3 +1,5 @@
+# Notes dari Monica: `.next` dan` node_modules`tidak dipush karena file total menjadi lebih dari 100mb
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
